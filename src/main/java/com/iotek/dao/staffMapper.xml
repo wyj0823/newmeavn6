@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.iotek.dao.StaffDao">
+    <resultMap id="aaa" type="Staff">
+        <id property="staffId" column="staff_id"/>
+        <result property="userNumber" column="user_number"/>
+        <result property="userPassword" column="user_password"/>
+        <result property="roleId" column="role_id"/>
+        <result property="staffAddr" column="staff_addr"/>
+        <result property="staffName" column="staff_name"/>
+        <result property="staffEntryTime" column="staff_entry_time"/>
+        <result property="staffSex" column="staff_sex"/>
+        <result property="staffAge" column="staff_age"/>
+        <result property="staffState" column="staff_State"/>
+        <result property="staffQq" column="staff_qq"/>
+        <result property="staffMobilePhone" column="staff_mobile_phone"/>
+    </resultMap>
+
+
+    <select id="queryAll" resultType="com.iotek.entity.Staff">
+        select * from staff_info
+    </select>
+
+
+
+</mapper>
